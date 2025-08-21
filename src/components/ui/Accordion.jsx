@@ -7,7 +7,11 @@ const Accordion = ({ children, type = "single", collapsible = false, defaultValu
 
   const toggleItem = (value) => {
     if (type === "single") {
-      setOpenItems(openItems.includes(value) ? [] : [value]);
+      if (collapsible) {
+        setOpenItems(openItems.includes(value) ? [] : [value]);
+      } else {
+        setOpenItems([value]);
+      }
     } else {
       setOpenItems(
         openItems.includes(value)
@@ -30,7 +34,7 @@ const AccordionItem = ({ value, className, children, openItems, toggleItem }) =>
   const isOpen = openItems?.includes(value);
   
   return (
-    <div className={cn("border-b", className)}>
+    <div className={cn("border-b", className)} data-state={isOpen ? "open" : "closed"}>
       {React.Children.map(children, child =>
         React.cloneElement(child, { value, isOpen, toggleItem })
       )}
@@ -38,25 +42,35 @@ const AccordionItem = ({ value, className, children, openItems, toggleItem }) =>
   );
 };
 
-const AccordionTrigger = ({ className, children, value, isOpen, toggleItem }) => (
+const AccordionTrigger = ({ className, children, value, isOpen, toggleItem, ...props }) => (
   <button
     className={cn(
       "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:no-underline w-full text-left",
       className
     )}
-    onClick={() => toggleItem(value)}
+    onClick={() => toggleItem && toggleItem(value)}
+    data-state={isOpen ? "open" : "closed"}
+    type="button"
+    aria-expanded={isOpen}
+    {...props}
   >
     {children}
-    <ChevronDown className={cn("h-4 w-4 shrink-0 transition-transform duration-200", isOpen && "rotate-180")} />
+    <ChevronDown 
+      className={cn(
+        "h-4 w-4 shrink-0 transition-transform duration-200", 
+        isOpen && "rotate-180"
+      )} 
+    />
   </button>
 );
 
 const AccordionContent = ({ className, children, isOpen }) => (
   <div
     className={cn(
-      "overflow-hidden text-sm transition-all",
-      isOpen ? "animate-accordion-down" : "animate-accordion-up"
+      "overflow-hidden text-sm transition-all duration-300 ease-in-out",
+      isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
     )}
+    data-state={isOpen ? "open" : "closed"}
   >
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
   </div>
