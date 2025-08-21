@@ -10,6 +10,7 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage'
 import TermsOfServicePage from './pages/TermsOfServicePage'
 import ShippingDeliveryPage from './pages/ShippingDeliveryPage'
 import ReturnsRefundsPage from './pages/ReturnsRefundsPage'
+import StoreLocatorPage from './pages/StoreLocatorPage'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/terms-of-service" element={<TermsOfServicePage />} />
         <Route path="/shipping-and-delivery" element={<ShippingDeliveryPage />} />
         <Route path="/returns-and-refunds" element={<ReturnsRefundsPage />} />
+        <Route path="/store-locator" element={<StoreLocatorPage />} />
       </Routes>
     </div>
   )

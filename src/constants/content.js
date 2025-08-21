@@ -30,7 +30,7 @@ export const NAVIGATION = {
     { href: '/', label: 'Home' },
     { href: '/product', label: 'Product' },
     { href: '/gallery', label: 'Gallery' },
-    { href: '/#', label: 'Store Locator' },
+    { href: '/store-locator', label: 'Store Locator' },
     { href: '/#faq', label: 'FAQ' },
   ],
   policies: [
