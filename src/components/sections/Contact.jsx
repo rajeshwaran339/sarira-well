@@ -85,27 +85,27 @@ export function Contact() {
 
           {/* Right Column */}
           <div className="lg:col-span-3">
-            <Card className="bg-primary/95 text-primary-foreground p-8 shadow-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-1">
-              <h3 className="text-2xl font-bold text-white mb-6">Send us a Message</h3>
+            <Card className="bg-background border-2 border-accent/20 text-foreground p-8 shadow-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-1">
+              <h3 className="text-2xl font-bold text-primary mb-6">Send us a Message</h3>
               {!submitted ? (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="first-name" className="text-primary-foreground/80">First Name</label>
-                      <Input id="first-name" placeholder="Your first name" required className="bg-background/10 border-white/20 text-white placeholder:text-white/50 rounded-lg"/>
+                      <label htmlFor="first-name" className="text-primary font-medium">First Name</label>
+                      <Input id="first-name" placeholder="Your first name" required className="bg-secondary/30 border-accent/30 text-primary placeholder:text-muted-foreground focus:border-accent focus:ring-accent rounded-lg"/>
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="last-name" className="text-primary-foreground/80">Last Name</label>
-                      <Input id="last-name" placeholder="Your last name" required className="bg-background/10 border-white/20 text-white placeholder:text-white/50 rounded-lg"/>
+                      <label htmlFor="last-name" className="text-primary font-medium">Last Name</label>
+                      <Input id="last-name" placeholder="Your last name" required className="bg-secondary/30 border-accent/30 text-primary placeholder:text-muted-foreground focus:border-accent focus:ring-accent rounded-lg"/>
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-primary-foreground/80">Email</label>
-                    <Input id="email" type="email" placeholder="your.email@example.com" required className="bg-background/10 border-white/20 text-white placeholder:text-white/50 rounded-lg"/>
+                    <label htmlFor="email" className="text-primary font-medium">Email</label>
+                    <Input id="email" type="email" placeholder="your.email@example.com" required className="bg-secondary/30 border-accent/30 text-primary placeholder:text-muted-foreground focus:border-accent focus:ring-accent rounded-lg"/>
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-primary-foreground/80">Message</label>
-                    <Textarea id="message" placeholder="Tell us how we can help you..." required rows={5} className="bg-background/10 border-white/20 text-white placeholder:text-white/50 rounded-lg"/>
+                    <label htmlFor="message" className="text-primary font-medium">Message</label>
+                    <Textarea id="message" placeholder="Tell us how we can help you..." required rows={5} className="bg-secondary/30 border-accent/30 text-primary placeholder:text-muted-foreground focus:border-accent focus:ring-accent rounded-lg"/>
                   </div>
                   <div className="text-right">
                     <Button type="submit" size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-xl px-8 transition-transform duration-300 hover:scale-105">
@@ -125,7 +125,7 @@ export function Contact() {
                     </div>
                   </motion.div>
                   <motion.h3 
-                    className="text-2xl font-bold text-white mb-2"
+                    className="text-2xl font-bold text-primary mb-2"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
@@ -133,7 +133,7 @@ export function Contact() {
                     Thank You!
                   </motion.h3>
                   <motion.p 
-                    className="text-white/80"
+                    className="text-muted-foreground"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
