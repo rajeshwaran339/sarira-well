@@ -42,9 +42,9 @@ export function Ingredients() {
                 transition={{ delay: index * 0.1 }}
                 className="h-full"
               >
-                <Card className="text-center h-full flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border-primary/10">
+                <Card className="text-center h-full flex flex-col border-primary/10 bg-gradient-to-br from-white to-secondary/20">
                   <CardHeader>
-                    <div className="mx-auto bg-accent/10 text-accent p-4 rounded-full w-fit mb-4">
+                    <div className="mx-auto bg-accent/15 text-accent p-4 rounded-full w-fit mb-4 shadow-md">
                       <IconComponent className="w-8 h-8" />
                     </div>
                     <CardTitle className="text-2xl font-semibold text-primary">
@@ -52,7 +52,7 @@ export function Ingredients() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">{ingredient.description}</p>
+                    <p className="text-muted-foreground leading-relaxed">{ingredient.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>

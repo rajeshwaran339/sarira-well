@@ -20,26 +20,26 @@ export function Journal() {
           {JOURNAL.posts.map((post, index) => (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
               <div className="p-1 h-full">
-                <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 h-full flex flex-col">
+                <Card className="overflow-hidden h-full flex flex-col bg-gradient-to-br from-white to-secondary/20">
                   <CardHeader className="p-0">
                     <Link to={post.link}>
                       <img 
                         src={post.image} 
                         alt={post.title} 
-                        className="w-full h-48 object-cover" 
+                        className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105" 
                       />
                     </Link>
                   </CardHeader>
                   <CardContent className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold text-primary mb-2 h-20">
+                    <h3 className="text-xl font-bold text-primary mb-3 h-20 leading-tight">
                       {post.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4 h-24 overflow-hidden flex-grow">
+                    <p className="text-muted-foreground mb-4 h-24 overflow-hidden flex-grow leading-relaxed">
                       {post.description}
                     </p>
                     <Link 
                       to={post.link} 
-                      className="font-semibold text-accent hover:underline mt-auto"
+                      className="font-semibold text-accent hover:underline mt-auto transition-colors duration-300 hover:text-accent/80"
                     >
                       Read More →
                     </Link>

@@ -50,15 +50,15 @@ export function HowToUse() {
                 transition={{ delay: index * 0.1 }}
                 className="h-full"
               >
-                <Card className="text-center h-full flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                <Card className="text-center h-full flex flex-col bg-gradient-to-br from-white to-secondary/20">
                   <CardHeader>
-                    <div className="mx-auto bg-accent/10 text-accent p-4 rounded-full w-fit mb-4">
+                    <div className="mx-auto bg-accent/15 text-accent p-4 rounded-full w-fit mb-4 shadow-md">
                       <IconComponent className="w-6 h-6" />
                     </div>
                     <CardTitle>{method.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">{method.description}</p>
+                    <p className="text-muted-foreground leading-relaxed">{method.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>

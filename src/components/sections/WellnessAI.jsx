@@ -43,13 +43,13 @@ export function WellnessAI() {
           </p>
         </div>
         
-        <Card className="shadow-2xl border-primary/10 bg-white/50 backdrop-blur-sm max-w-3xl mx-auto">
+        <Card className="shadow-2xl border-primary/10 bg-white/60 backdrop-blur-md max-w-3xl mx-auto">
           <CardContent className="p-8">
             <div className="max-w-xl mx-auto">
               <h3 className="text-xl font-bold text-primary mb-2 text-center">
                 {WELLNESS_AI.formTitle}
               </h3>
-              <p className="text-muted-foreground mb-6 text-center">
+              <p className="text-muted-foreground mb-6 text-center leading-relaxed">
                 {WELLNESS_AI.formSubtitle}
               </p>
               
@@ -59,13 +59,13 @@ export function WellnessAI() {
                     value={topic}
                     onChange={(e) => setTopic(e.target.value)}
                     placeholder="e.g., Healthy Digestion" 
-                    className="flex-grow bg-background text-center" 
+                    className="flex-grow bg-background text-center shadow-md transition-all duration-300 hover:shadow-lg focus:shadow-lg" 
                   />
                 </div>
                 <Button 
                   type="submit" 
                   disabled={isLoading || !topic.trim()} 
-                  className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                  className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg"
                 >
                   {isLoading ? 'Generating...' : (
                     <>
@@ -76,14 +76,14 @@ export function WellnessAI() {
               </form>
 
               <div className="text-center">
-                <p className="text-sm text-muted-foreground mb-2">Or try one of these:</p>
+                <p className="text-sm text-muted-foreground mb-3">Or try one of these:</p>
                 <div className="flex flex-wrap gap-2 justify-center">
                   {WELLNESS_AI.suggestions.map(suggestion => (
                     <Button 
                       key={suggestion} 
                       variant="outline" 
                       size="sm" 
-                      className="border-accent text-accent hover:bg-accent/10"
+                      className="border-accent text-accent hover:bg-accent/10 shadow-sm transition-all duration-300 hover:shadow-md"
                       onClick={() => handleSuggestionClick(suggestion)}
                     >
                       {suggestion}
@@ -94,13 +94,13 @@ export function WellnessAI() {
 
               {tip && (
                 <div className="mt-8 pt-6 border-t border-primary/10">
-                  <div className="p-6 flex flex-col items-center justify-center h-full transition-opacity duration-500 bg-primary/5 rounded-lg">
+                  <div className="p-6 flex flex-col items-center justify-center h-full transition-opacity duration-500 bg-primary/5 rounded-xl shadow-inner">
                     <div className="w-full text-center">
                       <h4 className="font-bold text-lg text-accent mb-2 flex items-center justify-center">
                         <Sparkles className="mr-2 h-5 w-5"/>
                         Your AI-Generated Wellness Tip
                       </h4>
-                      <p className="whitespace-pre-wrap text-primary/90">{tip}</p>
+                      <p className="whitespace-pre-wrap text-primary/90 leading-relaxed">{tip}</p>
                     </div>
                   </div>
                 </div>

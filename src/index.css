@@ -21,4 +21,71 @@
   .animate-floating {
     animation: floating 3s ease-in-out infinite;
   }
+  
+  /* Enhanced scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #F8F5EF;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #E38A30;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d17a28;
+  }
+  
+  /* Enhanced focus states */
+  .focus-visible\:ring-2:focus-visible {
+    ring-color: #E38A30;
+  }
+  
+  /* Improved text rendering */
+  body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Enhanced button hover states */
+  .btn-hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .btn-hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(54, 74, 34, 0.15);
+  }
+  
+  /* Responsive typography improvements */
+  @media (max-width: 768px) {
+    h1 { font-size: 2rem; line-height: 1.2; }
+    h2 { font-size: 1.75rem; line-height: 1.3; }
+    h3 { font-size: 1.5rem; line-height: 1.4; }
+    p { font-size: 1rem; line-height: 1.6; }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    h1 { font-size: 2.5rem; line-height: 1.2; }
+    h2 { font-size: 2rem; line-height: 1.3; }
+    h3 { font-size: 1.75rem; line-height: 1.4; }
+    p { font-size: 1.1rem; line-height: 1.6; }
+  }
+  
+  @media (min-width: 1025px) {
+    h1 { font-size: 3rem; line-height: 1.2; }
+    h2 { font-size: 2.25rem; line-height: 1.3; }
+    h3 { font-size: 2rem; line-height: 1.4; }
+    p { font-size: 1.125rem; line-height: 1.7; }
+  }
 }

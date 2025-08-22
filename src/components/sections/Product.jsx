@@ -42,7 +42,7 @@ export function Product() {
                 <div className="text-3xl font-bold text-primary">{PRODUCT.price}</div>
                 <div className="text-muted-foreground">{PRODUCT.weight}</div>
               </div>
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg">
                 <Link to="/product">Buy Now</Link>
               </Button>
             </div>

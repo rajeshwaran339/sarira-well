@@ -92,23 +92,27 @@ export function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label htmlFor="first-name" className="text-primary font-medium">First Name</label>
-                      <Input id="first-name" placeholder="Your first name" required className="bg-secondary/30 border-accent/30 text-primary placeholder:text-muted-foreground focus:border-accent focus:ring-accent rounded-lg"/>
+                      <Input id="first-name" placeholder="Your first name" required className="bg-secondary/30 border-accent/30 text-primary placeholder:text-muted-foreground focus:border-accent focus:ring-accent rounded-lg transition-all duration-300 hover:shadow-md focus:shadow-lg"/>
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="last-name" className="text-primary font-medium">Last Name</label>
-                      <Input id="last-name" placeholder="Your last name" required className="bg-secondary/30 border-accent/30 text-primary placeholder:text-muted-foreground focus:border-accent focus:ring-accent rounded-lg"/>
+                      <Input id="last-name" placeholder="Your last name" required className="bg-secondary/30 border-accent/30 text-primary placeholder:text-muted-foreground focus:border-accent focus:ring-accent rounded-lg transition-all duration-300 hover:shadow-md focus:shadow-lg"/>
                     </div>
                   </div>
                   <div className="space-y-2">
+                    <label htmlFor="phone" className="text-primary font-medium">Phone Number</label>
+                    <Input id="phone" type="tel" placeholder="+91 XXXXX XXXXX" required className="bg-secondary/30 border-accent/30 text-primary placeholder:text-muted-foreground focus:border-accent focus:ring-accent rounded-lg transition-all duration-300 hover:shadow-md focus:shadow-lg"/>
+                  </div>
+                  <div className="space-y-2">
                     <label htmlFor="email" className="text-primary font-medium">Email</label>
-                    <Input id="email" type="email" placeholder="your.email@example.com" required className="bg-secondary/30 border-accent/30 text-primary placeholder:text-muted-foreground focus:border-accent focus:ring-accent rounded-lg"/>
+                    <Input id="email" type="email" placeholder="your.email@example.com" required className="bg-secondary/30 border-accent/30 text-primary placeholder:text-muted-foreground focus:border-accent focus:ring-accent rounded-lg transition-all duration-300 hover:shadow-md focus:shadow-lg"/>
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-primary font-medium">Message</label>
-                    <Textarea id="message" placeholder="Tell us how we can help you..." required rows={5} className="bg-secondary/30 border-accent/30 text-primary placeholder:text-muted-foreground focus:border-accent focus:ring-accent rounded-lg"/>
+                    <Textarea id="message" placeholder="Tell us how we can help you..." required rows={5} className="bg-secondary/30 border-accent/30 text-primary placeholder:text-muted-foreground focus:border-accent focus:ring-accent rounded-lg transition-all duration-300 hover:shadow-md focus:shadow-lg"/>
                   </div>
                   <div className="text-right">
-                    <Button type="submit" size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-xl px-8 transition-transform duration-300 hover:scale-105">
+                    <Button type="submit" size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-xl px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg">
                       <Send className="mr-2 h-4 w-4" /> Send Message
                     </Button>
                   </div>

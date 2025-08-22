@@ -48,11 +48,11 @@ export function Benefits() {
                 transition={{ delay: index * 0.1 }}
                 className="h-full"
               >
-                <Card className="text-center h-full flex flex-col items-center justify-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border-primary/10 p-6">
-                  <div className="mx-auto bg-accent/10 text-primary p-4 rounded-full w-fit mb-4">
+                <Card className="text-center h-full flex flex-col items-center justify-center border-primary/10 p-6 bg-gradient-to-br from-white to-secondary/20">
+                  <div className="mx-auto bg-accent/15 text-primary p-4 rounded-full w-fit mb-4 shadow-md">
                     <IconComponent className="w-12 h-12" />
                   </div>
-                  <CardTitle className="text-lg font-semibold text-primary">
+                  <CardTitle className="text-lg font-semibold text-primary leading-tight">
                     {benefit.name}
                   </CardTitle>
                 </Card>

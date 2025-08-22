@@ -31,9 +31,9 @@ export function Community() {
             
             if (section.title === "For Stores & Retailers") {
               return (
-                <Card key={index} className="bg-secondary/50 border-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300 group flex flex-col">
+                <Card key={index} className="bg-gradient-to-br from-secondary/50 to-secondary/70 border-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-500 group flex flex-col">
                   <CardHeader>
-                    <div className="text-accent group-hover:text-accent mb-4">
+                    <div className="text-accent group-hover:text-accent mb-4 bg-accent/10 p-3 rounded-full w-fit shadow-md">
                       <IconComponent className="w-10 h-10" />
                     </div>
                     <CardTitle className="text-2xl font-bold text-primary group-hover:text-primary-foreground">
@@ -42,7 +42,7 @@ export function Community() {
                   </CardHeader>
                   <CardContent className="flex flex-col flex-grow">
                     <div className="flex-grow">
-                      <p className="text-muted-foreground group-hover:text-primary-foreground/80 mb-4 transition-all duration-300">
+                      <p className="text-muted-foreground group-hover:text-primary-foreground/80 mb-4 transition-all duration-300 leading-relaxed">
                         {section.description}
                       </p>
                       <Button 
@@ -56,7 +56,7 @@ export function Community() {
                     <div className="mt-auto">
                       <Dialog>
                         <DialogTrigger asChild>
-                          <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90" size="lg">
+                          <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg" size="lg">
                             Become a Reseller
                           </Button>
                         </DialogTrigger>
@@ -96,9 +96,9 @@ export function Community() {
             }
 
             return (
-              <Card key={index} className="bg-secondary/50 border-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300 group flex flex-col">
+              <Card key={index} className="bg-gradient-to-br from-secondary/50 to-secondary/70 border-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-500 group flex flex-col">
                 <CardHeader>
-                  <div className="text-accent group-hover:text-accent mb-4">
+                  <div className="text-accent group-hover:text-accent mb-4 bg-accent/10 p-3 rounded-full w-fit shadow-md">
                     <IconComponent className="w-10 h-10" />
                   </div>
                   <CardTitle className="text-2xl font-bold text-primary group-hover:text-primary-foreground">
@@ -106,7 +106,7 @@ export function Community() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="flex flex-col flex-grow">
-                  <CardDescription className="mb-6 text-muted-foreground group-hover:text-primary-foreground/80 min-h-[140px]">
+                  <CardDescription className="mb-6 text-muted-foreground group-hover:text-primary-foreground/80 min-h-[140px] leading-relaxed">
                     {section.description}
                   </CardDescription>
                   <div className="space-y-4 mt-auto">
@@ -120,7 +120,7 @@ export function Community() {
                             <Facebook className="w-7 h-7" />
                           </a>
                         </div>
-                        <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90" size="lg">
+                        <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg" size="lg">
                           <a href={SITE_CONFIG.contact.whatsapp} target="_blank" rel="noopener noreferrer">
                             Join on WhatsApp
                           </a>
@@ -128,7 +128,7 @@ export function Community() {
                       </>
                     )}
                     {section.title === "Nourishing Recipes" && (
-                      <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90" size="lg">
+                      <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg" size="lg">
                         <Link to="/recipes">Explore Recipes</Link>
                       </Button>
                     )}

@@ -33,17 +33,17 @@ export function Testimonials() {
               variants={cardVariants}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="bg-background border-primary/10 h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+              <Card className="bg-gradient-to-br from-background to-secondary/30 border-primary/10 h-full">
                 <CardContent className="p-8 flex flex-col h-full">
-                  <p className="text-muted-foreground italic mb-6 text-lg leading-relaxed flex-grow">
+                  <p className="text-muted-foreground italic mb-6 text-lg leading-relaxed flex-grow font-medium">
                     "{testimonial.quote}"
                   </p>
                   <div className="flex items-center mt-auto">
-                    <div className="w-12 h-12 mr-4 bg-primary/10 text-primary font-bold rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 mr-4 bg-primary/15 text-primary font-bold rounded-full flex items-center justify-center shadow-md">
                       {testimonial.initials}
                     </div>
                     <div>
-                      <div className="font-semibold text-primary">{testimonial.name}</div>
+                      <div className="font-bold text-primary">{testimonial.name}</div>
                       <div className="text-sm text-muted-foreground">{testimonial.location}</div>
                     </div>
                   </div>

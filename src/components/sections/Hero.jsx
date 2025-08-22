@@ -75,31 +75,31 @@ export function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg">
               <Link to="/product">Try Fig Malt</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
+            <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground shadow-lg">
               <Link to="/tamil-culture">Learn our story</Link>
             </Button>
           </div>
           
           <div className="mt-12 max-w-3xl mx-auto">
-            <div className="bg-white/30 rounded-lg p-4 shadow-inner border border-accent mb-12 backdrop-blur-sm animate-floating">
+            <div className="bg-white/40 rounded-xl p-6 shadow-lg border border-accent/30 mb-12 backdrop-blur-sm animate-floating transition-all duration-300 hover:shadow-xl">
               <p className="text-center text-lg font-semibold text-primary/90">
                 {HERO.guarantee}
               </p>
             </div>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
             {HERO.benefits.map(benefit => {
               const IconComponent = iconMap[benefit.icon];
               return (
-                <div key={benefit.text} className="flex flex-col items-center gap-3">
-                  <div className="text-accent">
+                <div key={benefit.text} className="flex flex-col items-center gap-3 p-4 rounded-xl bg-white/20 backdrop-blur-sm transition-all duration-300 hover:bg-white/30 hover:shadow-lg hover:-translate-y-1">
+                  <div className="text-accent bg-accent/10 p-3 rounded-full">
                     <IconComponent className="w-8 h-8" />
                   </div>
-                  <span className="text-base font-medium text-primary">{benefit.text}</span>
+                  <span className="text-sm font-semibold text-primary">{benefit.text}</span>
                 </div>
               );
             })}
