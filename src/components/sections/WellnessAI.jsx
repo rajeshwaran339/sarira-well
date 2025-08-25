@@ -28,14 +28,18 @@ export function WellnessAI() {
   };
 
   return (
-    <section id="wellness-ai" className="bg-secondary/50 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://storage.googleapis.com/stedi-dev-images/sarira-bg-texture.png')] bg-repeat bg-center opacity-[3%]"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-block bg-accent/10 text-accent p-3 rounded-full mb-4">
-            <BrainCircuit className="w-8 h-8" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+    <section id="wellness-ai" className="bg-gradient-to-br from-secondary/50 via-background to-accent/5 relative overflow-hidden">
+      {/* Subtle geometric pattern overlay using pure CSS */}
+      <div className="absolute inset-0 opacity-5" style={{
+        backgroundImage: `
+          linear-gradient(45deg, #364A22 25%, transparent 25%), 
+          linear-gradient(-45deg, #364A22 25%, transparent 25%), 
+          linear-gradient(45deg, transparent 75%, #E38A30 75%), 
+          linear-gradient(-45deg, transparent 75%, #E38A30 75%)
+        `,
+        backgroundSize: '20px 20px',
+        backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px'
+      }}></div>
             {WELLNESS_AI.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

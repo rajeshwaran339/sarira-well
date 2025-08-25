@@ -58,10 +58,11 @@ export function Hero() {
   }, [isMounted, headlineIndex]);
 
   return (
-    <section id="home" className="relative pt-32 pb-20 md:pt-48 md:pb-28 overflow-hidden bg-gradient-to-b from-background to-secondary">
-      <div className="absolute inset-0 bg-[url('https://storage.googleapis.com/stedi-dev-images/sarira-bg-texture.png')] bg-repeat bg-center opacity-5"></div>
+    <section id="home" className="relative pt-32 pb-20 md:pt-48 md:pb-28 overflow-hidden bg-gradient-to-br from-background via-secondary/30 to-accent/10">
+      {/* Subtle gradient overlay for texture effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 opacity-30"></div>
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-center relative z-10 gap-12">
-        <div className="w-full text-center">
+        <div className="lg:w-1/2 text-center lg:text-left">
           <p className="text-4xl md:text-5xl lg:text-6xl font-headline text-primary mb-4">
             Welcome to SARIRA Wellness
           </p>
@@ -103,6 +104,20 @@ export function Hero() {
                 </div>
               );
             })}
+          </div>
+        </div>
+        
+        {/* Product Image Section */}
+        <div className="lg:w-1/2 flex justify-center">
+          <div className="relative">
+            <img
+              src={IMAGES.productHero}
+              alt="SARIRA Fig Malt Product"
+              className="w-full max-w-md mx-auto rounded-2xl shadow-2xl animate-floating transition-transform duration-300 hover:scale-105"
+            />
+            {/* Decorative elements */}
+            <div className="absolute -top-4 -right-4 w-8 h-8 bg-accent rounded-full opacity-60 animate-pulse"></div>
+            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-primary rounded-full opacity-40 animate-pulse delay-1000"></div>
           </div>
         </div>
       </div>

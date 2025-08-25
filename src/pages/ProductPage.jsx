@@ -195,13 +195,12 @@ export default function ProductPage() {
                         ))}
                       </ul>
                       <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-full h-auto object-cover rounded-lg mt-4"
+                        controls
+                        className="w-full h-auto object-cover rounded-2xl mt-4 shadow-lg"
+                        poster={IMAGES.productLifestyle}
                       >
-                        <source src="https://storage.googleapis.com/stedi-dev-images/sarira-fig-tree.mp4" type="video/mp4" />
+                        <source src={IMAGES.figTreeVideo} type="video/mp4" />
+                        Your browser does not support the video tag.
                       </video>
                     </AccordionContent>
                   </AccordionItem>

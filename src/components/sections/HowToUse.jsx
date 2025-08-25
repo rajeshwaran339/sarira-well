@@ -24,12 +24,16 @@ export function HowToUse() {
   return (
     <section id="how-to-use" className="bg-white">
       <div className="container mx-auto px-4">
-        <div className="mb-12">
-          <img 
-            src="https://placehold.co/1200x400.png"
-            alt="Person using SARIRA Fig Malt in a recipe"
-            className="w-full rounded-lg shadow-lg"
-          />
+        <div className="mb-12 text-center">
+          <div className="relative inline-block">
+            <img 
+              src={IMAGES.productLifestyle}
+              alt="SARIRA Fig Malt lifestyle usage"
+              className="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl transition-transform duration-300 hover:scale-105"
+            />
+            {/* Overlay gradient for better text readability if needed */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+          </div>
         </div>
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">

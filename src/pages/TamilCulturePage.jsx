@@ -96,11 +96,11 @@ export default function TamilCulturePage() {
 
         {/* Chapter 5: Grandmother's Wisdom */}
         <motion.section {...fadeIn} id="chapter-5" className="relative bg-white py-20 md:py-32">
-          <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 opacity-10">
             <img
               src={IMAGES.traditionalKitchen}
               alt="Traditional Kitchen Background"
-              className="w-full h-full object-cover brightness-75"
+              className="w-full h-full object-cover brightness-90"
             />
           </div>
           <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
@@ -134,9 +134,9 @@ export default function TamilCulturePage() {
             <p className="text-xl text-muted-foreground mb-10">Experience the pure, time-tested goodness of SARIRA Fig Malt.</p>
             <div className="flex justify-center">
               <img
-                src={IMAGES.productMain}
+                src={IMAGES.productShowcase}
                 alt="SARIRA Fig Malt"
-                className="w-full max-w-sm rounded-lg shadow-2xl mb-10"
+                className="w-full max-w-sm rounded-2xl shadow-2xl mb-10 transition-transform duration-300 hover:scale-105"
               />
             </div>
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-10 py-6">

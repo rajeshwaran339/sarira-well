@@ -18,9 +18,9 @@ export function Product() {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2 flex justify-center">
             <img
-              src={IMAGES.productMain}
+              src={IMAGES.productShowcase}
               alt="SARIRA Fig Malt Pouch"
-              className="w-full max-w-md mx-auto rounded-lg shadow-xl animate-floating"
+              className="w-full max-w-md mx-auto rounded-2xl shadow-2xl animate-floating transition-transform duration-300 hover:scale-105"
             />
           </div>
           
