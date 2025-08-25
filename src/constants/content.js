@@ -341,10 +341,12 @@ export const CONTACT = {
 };
 
 export const IMAGES = {
-  logo: "https://storage.googleapis.com/gcs-proxy/fstudio/v1/assets/948a313c_9b65_4487_98c1_823a0ff46d61/63345155_722a_49ed_a9bd_84f938a164c4",
-  productMain: "https://storage.googleapis.com/gcs-proxy/fstudio/v1/assets/948a313c_9b65_4487_98c1_823a0ff46d61/63345155_722a_49ed_a9bd_84f938a164c4",
-  traditionalKitchen: "https://storage.googleapis.com/stedi-dev-images/sarira-traditional-kitchen.png",
-  grandmothersHands: "https://storage.googleapis.com/stedi-dev-images/sarira-grandmothers-hands.png",
-  figTreeVideo: "https://storage.googleapis.com/stedi-dev-images/sarira-fig-tree.mp4",
-  bgTexture: "https://storage.googleapis.com/stedi-dev-images/sarira-bg-texture.png"
+  // Local image placeholders - replace these with actual local images
+  logo: "/images/sarira-logo.png",
+  productMain: "/images/sarira-fig-malt-product.jpg",
+  productShowcase: "/images/sarira-product-showcase.jpg",
+  productLifestyle: "/images/sarira-lifestyle.jpg",
+  traditionalKitchen: "/images/traditional-kitchen.jpg",
+  grandmothersHands: "/images/grandmothers-hands.jpg",
+  figTreeVideo: "/videos/fig-tree.mp4"
 };
